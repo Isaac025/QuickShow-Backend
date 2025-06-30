@@ -24,3 +24,22 @@ set up clerk on backend
 16. INNGEST HOME PAGE => click docs => click nodeJs => Inatall ingest
 17. create an ingest client (create new folder called ingest, then create index.js file in the folder)
 ** connect inngest with clerk => create => click testing => select an event type => user event
+
+-- deploy frontned and backend 
+-- sync inngest project/platform
+-- apps ==> sync new app --. provide backend url /api/inngest --> sync app
+-- delete acccount on your deployed website then check "runs" on inngest to see the deleted info
+
+
+minimize: false Option
+This option tells Mongoose to not remove empty objects when saving documents to MongoDB.
+Normally, Mongoose removes empty objects ({}) from documents to save space
+With minimize: false, even if occupiedSeats is empty ({}), it will still be stored in the database
+This is useful for the occupiedSeats field because:
+You want to maintain the field structure even when no seats are occupied
+It ensures consistent document structure
+Makes it easier to query and update the field later
+
+--for tmdb api 
+-- tmdb website --> login --> settings --> api --> copy api key
+--click more --> api documentation --> api reference (make sure it is on v3) --> left hand side (now playing) --> node.js --> try it

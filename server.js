@@ -7,12 +7,14 @@ const mongoose = require("mongoose");
 const { clerkMiddleware } = require("@clerk/express");
 const { inngest, functions } = require("./inngest/index");
 const { serve } = require("inngest/express");
+const showRouter = require("./routes/showRouter");
 //middleware
 app.use(express.json());
 app.use(cors());
 app.use(clerkMiddleware());
 // Set up the "/api/inngest" (recommended) routes with the serve handler
 app.use("/api/inngest", serve({ client: inngest, functions }));
+app.use("/api/show", showRouter);
 
 //routes
 app.get("/", (req, res) => {
